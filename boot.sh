@@ -3,7 +3,7 @@
 set -e
 
 # Install dependencies
-apt install curl zsh
+sudo apt install curl zsh
 
 # Install Oh My Zsh
 if [ ! -d "$HOME/.oh-my-zsh" ]; then
@@ -28,7 +28,7 @@ for file in "${DOTFILES[@]}"; do
     fi
     
     if [ -f "$DOTFILES_DIR/$file" ]; then
-        ln -sf "$DOTFILES_DIR/$file" "$HOME/$file"
+        ln -s "$DOTFILES_DIR/$file" "$HOME/$file"
         echo "Symlinked $file"
     else
         echo "Warning: $file not found in dotfiles directory"

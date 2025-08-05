@@ -102,3 +102,18 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+
+if command -v keychain 2>&1 >/dev/null
+then
+    if [ -f ~/.ssh/id_rsa ]
+    then
+        eval `keychain -q --eval --agents ssh id_rsa`
+    fi
+    
+    if [ -f ~/.ssh/id_ed25519 ]
+    then
+        eval `keychain -q --eval --agents ssh id_ed25519`
+    fi
+fi
+
+. "$HOME/.local/bin/env"
