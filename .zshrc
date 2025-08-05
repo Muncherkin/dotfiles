@@ -117,3 +117,4 @@ then
 fi
 
 . "$HOME/.local/bin/env"
+PROMPT="$fg[cyan]%}$USER@%{$fg[blue]%}%m ${PROMPT}"
