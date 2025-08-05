@@ -120,3 +120,4 @@ if [ -e "$HOME/.local/bin/env" ]; then
 . "$HOME/.local/bin/env"
 fi
 PROMPT="$fg[cyan]%}$USER@%{$fg[blue]%}%m ${PROMPT}"
+source "$HOME/.rye/env"
