@@ -119,5 +119,5 @@ fi
 if [ -e "$HOME/.local/bin/env" ]; then
 . "$HOME/.local/bin/env"
 fi
-PROMPT="$fg[cyan]%}$USER@%{$fg[blue]%}%m ${PROMPT}"
+PROMPT="%{$fg[cyan]%}$USER%{$reset_color%}@%{$fg[blue]%}%m%{$reset_color%} ${PROMPT}"
 source "$HOME/.rye/env"
